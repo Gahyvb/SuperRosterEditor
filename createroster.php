@@ -21,7 +21,7 @@ if ($_SESSION['email'] == NULL){
 <?php
 
 
-        $conn = mysqli_connect('localhost','admin','password','roster') or die ("error connecting to database");
+        $conn = mysqli_connect('localhost','admin','','roster') or die ("error connecting to database");
         $query = "SELECT * FROM ships ORDER BY faction ASC, points DESC";
         $result = mysqli_query($conn, $query);
         echo"<table class='table table-bordered table-hover table-striped'>
